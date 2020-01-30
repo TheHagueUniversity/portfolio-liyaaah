@@ -1,0 +1,300 @@
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;} 
+
+
+
+html{
+    box-sizing: border-box;
+    font-size:60%;
+    font-weight: 400;
+    font-family: font-family: 'Lato', sans-serif; 
+    color: #90A1FF;
+    line-height: 48px;
+*/
+}
+body { 
+  margin: 0;
+  font-family: font-family: 'Lato', sans-serif; 
+}
+
+h1{ 
+    line-height: 48px;
+    margin-bottom: 0px; 
+    font-family:'Lato', sans-serif;
+    font-weight: 600; 
+    font-size: 35px;
+    color:#90A1FF;
+    margin-left: 100px;
+}
+
+p{
+    line-height: 48px;
+    margin-bottom: 0px; 
+    font-family:'Lato', sans-serif;
+    font-weight: 300; 
+    font-size: 22px;
+    color:#707070;
+    margin-left: 20px;
+    
+}
+
+navigation{ 
+    position: fixed;
+    z-index: 1;
+}
+.navigation {
+  /*overflow: hidden; specifies what should happen if content overflows an element's box */
+  background-color: white;
+  padding: 45px 10px;
+    position: fixed;
+    width:100%;
+    top: 0;
+    box-shadow: 0px 3px 6px 0px rgba(138,138,138,1);
+    z-index: 1;
+    
+
+    
+}
+
+.navigation a {
+  font-family: 'Open Sans', sans-serif;   
+  float: left;
+  text-align: center;
+  color:#707070;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px; 
+  font-weight: 100;    
+  line-height: 25px;
+  border-radius: 2px;
+    
+    
+}
+
+
+.navigation a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.navigation a:hover {
+  background-color: #f7f8fc;
+  color: black;
+  cursor: url(rock.cur),auto; 
+  text-decoration-style: solid;    
+  text-decoration-color: black;
+  -webkit-text-fill-color: black;  
+       left: 0;
+}
+
+
+.navigation a.active {
+  background-color: black;
+  color: white;
+}
+
+.navigation-right {
+  float: right;
+    margin-right: 40px;
+}
+
+@media screen and (max-width: 500px) {
+  .navigation a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .navigation-right {
+    float: none;
+  }
+}
+
+
+
+header {
+    padding: 40px;
+height: 1000px;
+    background: #f7f8fc;
+  margin-top: 10px;
+    margin-bottom: 0;
+    text-align: left;
+  line-height: 3px;
+    text-align: left;
+    
+}
+
+.scroll{
+    text-align: center;
+    margin-top: 360px;
+    font-family:'Lato', sans-serif; 
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.introduction{
+
+    font-family:'Lato', sans-serif; 
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-fill-color: #646466; 
+    margin-top: 240px;
+    margin-left: 70px;
+    font-size: 45px;
+    font-weight: 100;
+    line-height: normal;
+}
+
+.introduction .hello{
+    font-weight:600;
+    -webkit-text-fill-color: #90A1FF;
+    
+}
+
+.introduction .bold_text{
+    -webkit-text-fill-color: #90A1FF;
+}
+
+.textsmall{
+
+    font-family:'Lato', sans-serif; 
+    margin-left: 70px;
+    font-size: 22px;
+    font-weight: 200;
+    line-height: normal;
+    color: #646466;
+    margin-top: 100px;
+}
+.textsmall .bold_text{
+    font-weight: 400
+}
+
+.introduction .hello{
+    
+}
+
+.introgif{
+    
+    position: relative;
+    float: right;
+    margin-right:100px;
+
+}
+
+.portfolio{
+    
+    margin-top: 100px;
+}
+img {
+  width: 100%; /* need to overwrite inline dimensions */
+  height: auto;
+}
+h2 {
+  margin-bottom: .5em;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  grid-gap: 1em;
+  margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+      
+}
+
+
+/* hover styles */
+.location-listing {
+  position: relative;
+}
+
+.location-image {
+  line-height: 0;
+  overflow: hidden;
+    border-radius: 5px;
+}
+
+.location-image img {
+  filter: blur(0px);
+  transition: filter 0.3s ease-in;
+  transform: scale(1.1);
+    border-radius: 5px;
+}
+
+.location-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s;
+  background: rgba(144,161,255);
+  color: white;
+
+  /* position the text in t’ middle*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-listing:hover .location-title {
+  opacity: 1;
+    border-radius: 5px;
+}
+
+.location-listing:hover .location-image img {
+  filter: blur(2px);
+
+}
+
+
+/* for touch screen devices */
+@media (hover: none) { 
+  .location-title {
+    opacity: 1;
+  }
+  .location-image img {
+    filter: blur(4px);
+  }
+}
+
+.aboutme{
+     width: 100;
+    height: 800px;
+    background: #F7F8FC;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 60px;
+    text-align: left;   
+    
+}
+
+.aboutmeblock p{
+
+    margin-left: 60px;
+    margin-right: 900px;
+    line-height: normal;
+    font-size: 18px;
+    margin-top: 60px;
+}
+
+.selfportrait{
+    
+  display: block;
+    float: right;
+}
+.workexperience{
+    
+    max-width: 100%;
+}
+
+
+  
+    
+</style>
+
