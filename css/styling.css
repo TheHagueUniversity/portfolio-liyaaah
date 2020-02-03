@@ -6,48 +6,63 @@
 
 html{
     box-sizing: border-box;
-    font-size:60%;
-    font-weight: 400;
-    font-family: font-family: 'Lato', sans-serif; 
-    color: #90A1FF;
-*/
+    font-size: 60%;
+    font-family: 'Lato', sans-serif; 
+        color:#90A1FF;
 }
+
 body { 
-  margin: 0;
-  font-family: font-family: 'Lato', sans-serif; 
+    margin:auto;
+
 }
+
 
 h1{ 
     line-height: 48px;
-    margin-bottom: 0px; 
-    font-family:'Lato', sans-serif;
     font-weight: 600; 
     font-size: 35px;
-    color:#90A1FF;
     margin-left: 100px;
 }
 
 h2 {
-    font-family:'Lato', sans-serif;
     font-weight: 300; 
     font-size: 22px;
+    margin-left: 100px;
     
 }
 p{
     line-height: normal;
-    margin-bottom: 0px; 
-    font-family:'Lato', sans-serif;
     font-weight: 300; 
     font-size: 18px;
     color:#707070;
     margin-left: 20px;
+    margin-right: 40%;
     
 }
+
+article{
+    
+    margin-bottom: 100px;
+}
+
+img{
+    
+    position: relative;
+    margin-left: 100px;
+}
+
+iframe{
+    margin-left: 100px;
+}
+
+
 
 navigation{ 
     position: fixed;
     z-index: 2;
 }
+
+
 .navigation {
   /*overflow: hidden; specifies what should happen if content overflows an element's box */
   background-color: white;
@@ -90,9 +105,7 @@ navigation{
   color: black;
   cursor: url(rock.cur),auto; 
   text-decoration-style: solid;    
-  text-decoration-color: black;
-  -webkit-text-fill-color: black;  
-       left: 0;
+  text-decoration-color: black; 
 }
 
 
@@ -122,16 +135,10 @@ navigation{
 article {
     margin-top: 200px;
     display: block;
-    text-align: left;
     margin-left: 100px;
+    text-align: left;
 }
 
-
-article h2{
-   margin-left: 100px; 
-    
-    
-}
 
 article p{
     margin-left: 100px;
@@ -142,12 +149,12 @@ article p{
 
 header {
     padding: 40px;
-height: 1000px;
+    height: 1000px;
     background: #f7f8fc;
-  margin-top: 10px;
+    margin-top: 10px;
     margin-bottom: 0;
     text-align: left;
-  line-height: 3px;
+    line-height: 3px;
     text-align: left;
     
 }
@@ -155,16 +162,12 @@ height: 1000px;
 .scroll{
     text-align: center;
     margin-top: 330px;
-    font-family:'Lato', sans-serif; 
     font-size: 18px;
     line-height: 18px;
+    width: 100%;
 }
 
 .introduction{
-
-    font-family:'Lato', sans-serif; 
-    -webkit-text-stroke-width: 0px;
-    -webkit-text-fill-color: #646466; 
     margin-top: 240px;
     margin-left: 70px;
     font-size: 45px;
@@ -174,17 +177,16 @@ height: 1000px;
 
 .introduction .hello{
     font-weight:600;
-    -webkit-text-fill-color: #90A1FF;
+    color: #90A1FF;
     
 }
 
 .introduction .bold_text{
-    -webkit-text-fill-color: #90A1FF;
+    color: #90A1FF;
 }
 
 .textsmall{
 
-    font-family:'Lato', sans-serif; 
     margin-left: 70px;
     font-size: 22px;
     font-weight: 200;
@@ -192,63 +194,44 @@ height: 1000px;
     color: #646466;
     margin-top: 100px;
 }
-.textsmall .bold_text{
-    font-weight: 400
-}
 
-.introduction .hello{
-    
-}
 
-.introgif{
-    
-    position: relative;
-    float: right;
-    margin-right:100px;
-
-}
-
-.portfolio{
-    
-    margin-top: 100px;
-}
 .grid-container img {
   width: 100%; /* need to overwrite inline dimensions */
   height: auto;
-}
-h2 {
-  margin-bottom: .5em;
 }
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
   grid-gap: 1em;
   margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 100px;
+  margin-right: 100px;
+  margin-top: 100px;
       
 }
 
 
 /* hover styles */
-.location-listing {
+.portfolio-listing {
   position: relative;
 }
 
-.location-image {
+.portfolio-image {
   line-height: 0;
   overflow: hidden;
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
-.location-image img {
+.portfolio-image img {
   filter: blur(0px);
   transition: filter 0.3s ease-in;
   transform: scale(1.1);
-    border-radius: 5px;
+  border-radius: 5px;
+  margin-left: -38px;    
 }
 
-.location-title {
+.portfolio-title {
+  font-family: 'Lato', sans-serif;    
   font-size: 1.5em;
   font-weight: bold;
   text-decoration: none;
@@ -260,35 +243,24 @@ h2 {
   left: 0;
   opacity: 0;
   transition: opacity .5s;
-  background: rgba(144,161,255);
+  background: #637BFD;
   color: white;
+  border-radius: 5px;
+    
+      
 
-  /* position the text in t’ middle*/
+  /* position the text middle*/
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.location-listing:hover .location-title {
+.portfolio-listing:hover .portfolio-title {
   opacity: 1;
   border-radius: 5px;
 }
 
-.location-listing:hover .location-image img {
-  filter: blur(2px);
 
-}
-
-
-/* for touch screen devices */
-@media (hover: none) { 
-  .location-title {
-    opacity: 1;
-  }
-  .location-image img {
-    filter: blur(4px);
-  }
-}
 
 #aboutme{
     width: 100;
@@ -300,7 +272,7 @@ h2 {
    
 }
     
-    .aboutme__image{
+.aboutme__image{
         
         max-width: 250px;
         height: auto;
@@ -309,7 +281,7 @@ h2 {
         display: inline-block;
         
     }
-    .aboutme__text{
+.aboutme__text{
         display: block;
         float: left;
         margin: -480px 40% 30px 30px;
@@ -318,19 +290,13 @@ h2 {
     }
 
 
-
-.selfportrait{
-    
-  display: inline-block;
-    float: right;
-}
 .workexperience{
     
     max-width: 100%;
 }
 
 
-footer {
+footer {  
   position: fixed;
   clear: both;
   left: 0;
@@ -339,6 +305,7 @@ footer {
   width: 100%;
   background-color: #637BFD;
   text-align: center;
+  color: white;
   -webkit-text-fill-color: white;
   z-index:1000; 
     height: 8em;
@@ -350,20 +317,20 @@ footer {
     display: inline;
     align-content: center;
     text-decoration: none;
-     -webkit-text-fill-color: white;
+    text-decoration-color: white;
+    font-size: 16px;
+
 }
 
 .contact_links a{
     
-    text-decoration: none;
-
-    
+    text-decoration: none;   
 }
 
 footer a:visited {
 
   text-decoration: none;
-    -webkit-text-fill-color: white;
+  -webkit-text-fill-color: white;
 }
 
 #copyright_information{
@@ -371,29 +338,9 @@ footer a:visited {
     font-size: 12px;
 }
 
-
-  
-
-
 /* ------------------------Coding PAGE---------------------------- */
 
-article #interactive_grid{
-    
-    float: left;
-    margin-left: 100px;
-}
-#video_game{
-    
-    width: 100px;
-    height: 20px;
-    float: right;
-    
-}
 
-#workandeducation{
-    
-    margin-bottom: 100px;
-}
 }
 
 </style>
